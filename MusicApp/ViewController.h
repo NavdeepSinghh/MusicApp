@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *viewContolMedia;
+- (IBAction)play:(id)sender;
+- (IBAction)stop:(id)sender;
 
 @end
 

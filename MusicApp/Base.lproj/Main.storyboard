@@ -1,26 +1,103 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UUq-Sa-tZR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="fbG-08-KkG">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="UUq-Sa-tZR" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Hf2-eI-zE0"/>
+                        <viewControllerLayoutGuide type="bottom" id="zzT-9B-2W1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="xLb-QQ-SRF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Songs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BME-3F-v9e">
+                                <rect key="frame" x="16" y="40" width="343" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Ea-8E-Gby">
+                                <rect key="frame" x="16" y="74" width="343" height="593"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UUq-Sa-tZR" id="6Ii-bF-cN2"/>
+                                    <outlet property="delegate" destination="UUq-Sa-tZR" id="asJ-0q-4t0"/>
+                                </connections>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixB-sM-b3c">
+                                <rect key="frame" x="16" y="592" width="343" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhZ-9a-hW2">
+                                        <rect key="frame" x="226" y="17" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="gTg-St-qUz"/>
+                                        </constraints>
+                                        <state key="normal" image="stop.png"/>
+                                        <connections>
+                                            <action selector="stop:" destination="UUq-Sa-tZR" eventType="touchUpInside" id="x1V-fb-KXw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ej8-Ve-Iu9">
+                                        <rect key="frame" x="67" y="17" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="NqY-Pz-dJH"/>
+                                        </constraints>
+                                        <state key="normal" title="" image="play.png"/>
+                                        <connections>
+                                            <action selector="play:" destination="UUq-Sa-tZR" eventType="touchUpInside" id="wJg-jf-caA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ej8-Ve-Iu9" firstAttribute="top" secondItem="ixB-sM-b3c" secondAttribute="top" constant="17" id="CsS-jV-cjg"/>
+                                    <constraint firstAttribute="bottom" secondItem="DhZ-9a-hW2" secondAttribute="bottom" constant="8" id="FHj-Oz-zo1"/>
+                                    <constraint firstItem="ej8-Ve-Iu9" firstAttribute="leading" secondItem="ixB-sM-b3c" secondAttribute="leading" constant="67" id="L1a-dy-MXd"/>
+                                    <constraint firstAttribute="trailing" secondItem="DhZ-9a-hW2" secondAttribute="trailing" constant="67" id="N9o-7J-DT6"/>
+                                    <constraint firstAttribute="height" constant="75" id="cmS-3k-R9u"/>
+                                    <constraint firstAttribute="bottom" secondItem="ej8-Ve-Iu9" secondAttribute="bottom" constant="8" id="jBo-XB-8wr"/>
+                                    <constraint firstItem="DhZ-9a-hW2" firstAttribute="top" secondItem="ixB-sM-b3c" secondAttribute="top" constant="17" id="qAR-cu-npm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9745182966" green="0.9745182966" blue="0.9745182966" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Ea-8E-Gby" secondAttribute="trailing" id="0gn-cP-ofm"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="BME-3F-v9e" secondAttribute="leading" id="CkF-H5-mpI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ixB-sM-b3c" secondAttribute="trailing" id="LXu-C1-fnJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BME-3F-v9e" secondAttribute="trailing" id="UIG-RK-BUC"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3Ea-8E-Gby" secondAttribute="leading" id="X2R-7B-JPH"/>
+                            <constraint firstItem="zzT-9B-2W1" firstAttribute="top" secondItem="3Ea-8E-Gby" secondAttribute="bottom" id="fHf-Hk-Uhx"/>
+                            <constraint firstItem="zzT-9B-2W1" firstAttribute="top" secondItem="ixB-sM-b3c" secondAttribute="bottom" id="gW0-Jj-7xJ"/>
+                            <constraint firstItem="BME-3F-v9e" firstAttribute="top" secondItem="Hf2-eI-zE0" secondAttribute="bottom" constant="20" id="iUc-f5-2u5"/>
+                            <constraint firstItem="3Ea-8E-Gby" firstAttribute="top" secondItem="BME-3F-v9e" secondAttribute="bottom" constant="10" id="lYp-5q-XNW"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ixB-sM-b3c" secondAttribute="leading" id="qdv-mW-tbn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tblSongList" destination="3Ea-8E-Gby" id="1uI-n9-4Zm"/>
+                        <outlet property="viewContolMedia" destination="ixB-sM-b3c" id="2y3-eG-rLD"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xoa-0c-NwF" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.png" width="90" height="90"/>
+        <image name="stop.png" width="90" height="90"/>
+    </resources>
 </document>

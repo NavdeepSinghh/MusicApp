@@ -13,6 +13,8 @@
 		F16F68FE1F0F3F0200F06E75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16F68FC1F0F3F0200F06E75 /* Main.storyboard */; };
 		F16F69001F0F3F0200F06E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16F68FF1F0F3F0200F06E75 /* Assets.xcassets */; };
 		F16F69031F0F3F0200F06E75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16F69011F0F3F0200F06E75 /* LaunchScreen.storyboard */; };
+		F16F690E1F0FA1EA00F06E75 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F16F690C1F0FA1EA00F06E75 /* play@2x.png */; };
+		F16F690F1F0FA1EB00F06E75 /* stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F16F690D1F0FA1EA00F06E75 /* stop@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F16F68FF1F0F3F0200F06E75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F16F69021F0F3F0200F06E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F16F69041F0F3F0200F06E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16F690C1F0FA1EA00F06E75 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
+		F16F690D1F0FA1EA00F06E75 /* stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +62,10 @@
 		F16F68F21F0F3F0200F06E75 /* MusicApp */ = {
 			isa = PBXGroup;
 			children = (
-				F16F68F61F0F3F0200F06E75 /* AppDelegate.h */,
-				F16F68F71F0F3F0200F06E75 /* AppDelegate.m */,
-				F16F68F91F0F3F0200F06E75 /* ViewController.h */,
-				F16F68FA1F0F3F0200F06E75 /* ViewController.m */,
+				F16F690A1F0FA18900F06E75 /* AppDelegate */,
+				F16F690B1F0FA19400F06E75 /* Controllers */,
 				F16F68FC1F0F3F0200F06E75 /* Main.storyboard */,
-				F16F68FF1F0F3F0200F06E75 /* Assets.xcassets */,
-				F16F69011F0F3F0200F06E75 /* LaunchScreen.storyboard */,
-				F16F69041F0F3F0200F06E75 /* Info.plist */,
+				F16F69101F0FA1F000F06E75 /* Images */,
 				F16F68F31F0F3F0200F06E75 /* Supporting Files */,
 			);
 			path = MusicApp;
@@ -74,9 +74,39 @@
 		F16F68F31F0F3F0200F06E75 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F16F68FF1F0F3F0200F06E75 /* Assets.xcassets */,
+				F16F69011F0F3F0200F06E75 /* LaunchScreen.storyboard */,
+				F16F69041F0F3F0200F06E75 /* Info.plist */,
 				F16F68F41F0F3F0200F06E75 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F16F690A1F0FA18900F06E75 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F16F68F61F0F3F0200F06E75 /* AppDelegate.h */,
+				F16F68F71F0F3F0200F06E75 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F16F690B1F0FA19400F06E75 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F16F68F91F0F3F0200F06E75 /* ViewController.h */,
+				F16F68FA1F0F3F0200F06E75 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F16F69101F0FA1F000F06E75 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F16F690C1F0FA1EA00F06E75 /* play@2x.png */,
+				F16F690D1F0FA1EA00F06E75 /* stop@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +170,9 @@
 			files = (
 				F16F69031F0F3F0200F06E75 /* LaunchScreen.storyboard in Resources */,
 				F16F69001F0F3F0200F06E75 /* Assets.xcassets in Resources */,
+				F16F690E1F0FA1EA00F06E75 /* play@2x.png in Resources */,
 				F16F68FE1F0F3F0200F06E75 /* Main.storyboard in Resources */,
+				F16F690F1F0FA1EB00F06E75 /* stop@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
