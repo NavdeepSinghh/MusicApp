@@ -2,7 +2,7 @@
 //  MASongListCellTableViewCell.m
 //  MusicApp
 //
-//  Created by Navdeep Singh on 8/07/17.
+//  Created by Navdeep Singh on 11/07/17.
 //  Copyright © 2017 Navdeep Singh. All rights reserved.
 //
 
@@ -17,9 +17,26 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
+// populate cells instances for initialization
+-(void)cellWithData:(MAModel *)songObject isPlaying:(BOOL)isPlaying
+{
+    if(isPlaying){
+        FLAnimatedImage *playMusic = [[FLAnimatedImage alloc] initWithAnimatedGIFData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"music" ofType:@"gif"]]];
+        self.imgArtistArt.animatedImage=playMusic;
+    }
+    else{
+        [[[NSURLSession sharedSession] dataTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:songObject.albumArt] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60.0f] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.imgArtistArt.image = [UIImage imageWithData:data];
+            });
+        }] resume];
+    }
+    self.lblSongName.text=songObject.albumName;
+    self.lblArtistname.text=songObject.artist;
+    self.lblArtistAlbum.text=songObject.albumName;
+    
+}
 
 @end

@@ -2,7 +2,7 @@
 //  MASongListCellTableViewCell.h
 //  MusicApp
 //
-//  Created by Navdeep Singh on 8/07/17.
+//  Created by Navdeep Singh on 11/07/17.
 //  Copyright © 2017 Navdeep Singh. All rights reserved.
 //
 
