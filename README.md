@@ -7,7 +7,7 @@
 
 ### Steps to Setup ###
 
-* Clone the project in Sourcetree or download zip file.
+* Clone the project in Github Desktop or download zip file.
 * Extract the package from zip file and find the project. Double click and the project should open in Xcode.
 * Dependencies : Run the application on a device, simulator will not be able to show any results.
 
